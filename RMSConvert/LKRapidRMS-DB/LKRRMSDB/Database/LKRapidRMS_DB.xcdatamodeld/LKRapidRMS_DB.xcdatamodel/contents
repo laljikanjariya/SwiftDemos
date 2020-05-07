@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AgeRestriction" representedClassName="AgeRestriction" syncable="YES" codeGenerationType="class">
+        <attribute name="ageId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="ageRestrictionName" optional="YES" attributeType="String"/>
+        <attribute name="ageValue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="srNo" optional="YES" attributeType="Decimal" defaultValueString="0"/>
+    </entity>
+    <entity name="BarCodeSearch" representedClassName="BarCodeSearch" syncable="YES" codeGenerationType="class">
+        <attribute name="barcode" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="foundOnServer" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="modifiedBarCode" optional="YES" attributeType="String"/>
+        <attribute name="moduleName" optional="YES" attributeType="String"/>
+        <attribute name="resultCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="searchResult" optional="YES" attributeType="String"/>
+        <attribute name="searchText" optional="YES" attributeType="String"/>
+        <attribute name="serverLookup" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="BranchInfo" representedClassName="BranchInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="address1" optional="YES" attributeType="String"/>
+        <attribute name="address2" optional="YES" attributeType="String"/>
+        <attribute name="branchId" optional="YES" attributeType="String"/>
+        <attribute name="branchName" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="filePath" optional="YES" attributeType="String"/>
+        <attribute name="helpMessage1" optional="YES" attributeType="String"/>
+        <attribute name="helpMessage2" optional="YES" attributeType="String"/>
+        <attribute name="helpMessage3" optional="YES" attributeType="String"/>
+        <attribute name="is_Deleted" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="objmodule" optional="YES" attributeType="String"/>
+        <attribute name="phoneNo1" optional="YES" attributeType="String"/>
+        <attribute name="phoneNo2" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="supportEmail" optional="YES" attributeType="String"/>
+        <attribute name="zipCode" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ChargePackageType" representedClassName="ChargePackageType" syncable="YES" codeGenerationType="class">
+        <attribute name="packageType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="feeOrDeposit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FeeOrDeposit" inverseName="chargePackageTypes" inverseEntity="FeeOrDeposit"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="chargePackageTypes" inverseEntity="Item"/>
+    </entity>
+    <entity name="ClockInOutRecords" representedClassName="ClockInOutRecords" syncable="YES" codeGenerationType="class">
+        <attribute name="clockId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="clockInTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="clockOutTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isOffline" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO"/>
+        <attribute name="isVoid" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="workingHour" optional="YES" attributeType="String"/>
+        <attribute name="workingTime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="clockInOutRecords" inverseEntity="UserInfo"/>
+    </entity>
+    <entity name="Configuration" representedClassName="Configuration" syncable="YES" codeGenerationType="class">
+        <attribute name="cancelTransactionMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="cashRegisterModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="clockInOutModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="customerLoyalty" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="dailyReportModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="discountMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="discountModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="dropAmountMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="ebt" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="holdInvoiceMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="houseCharge" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="inventoryCountModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="inventoryManagementModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="invoiceNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isGroup" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isTag" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemMovementModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemRingUpMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="lastAccessDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastOutsideTranDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastPetroUpdateDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastUpdateDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="localCancelTransactionMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localCashRegisterModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localClockInOutModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localCustomerLoyalty" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localDailyReportModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localDiscountMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localDiscountModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localDropAmountMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localEbt" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localHoldInvoiceMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localInventoryCountModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localInventoryManagementModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localItemMovementModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localItemRingUpMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localManagementPortalModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localManualEntryModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localMemoMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localNoSaleMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localPriceOverrideMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localPurchaseOrderModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localQOHChangedMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localRcrGasModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localReconcileManuelEntry" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localRestockReportModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localShiftId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="localShiftInOutModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localShippingOrderModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localTaxRemoveMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localTenderTypeMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localTicketSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localTipsSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localVMSVendorModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="managementPortalModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="manualEntryModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="masterUpdateDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="memoMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="noSaleMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="priceOverrideMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="purchaseOrderModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="qOHChangedMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="rcrGasModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="reconcileManuelEntry" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="regPrefixNo" optional="YES" attributeType="String"/>
+        <attribute name="restockReportModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="serverShiftId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="shiftInOutModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="shippingOrderModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="subDepartment" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="taxRemoveMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="tenderTypeMode" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="ticket" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="tips" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="vMSVendorModuleSetting" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="CredentialInfo" representedClassName="CredentialInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="quickAccess" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userName" optional="YES" attributeType="String"/>
+        <relationship name="credentialToUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="userCredential" inverseEntity="UserInfo"/>
+    </entity>
+    <entity name="CreditcardCredetnial" representedClassName="CreditcardCredetnial" syncable="YES" codeGenerationType="class">
+        <attribute name="aCCOUNT_TOKEN" optional="YES" attributeType="String"/>
+        <attribute name="aPI_KEY" optional="YES" attributeType="String"/>
+        <attribute name="branchId" optional="YES" attributeType="String"/>
+        <attribute name="cardInfoId" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="String"/>
+        <attribute name="gateway" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isManualProcess" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="merchantId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="paymentMode" optional="YES" attributeType="String"/>
+        <attribute name="uRL" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CurrencyShortcut" representedClassName="CurrencyShortcut" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+        <attribute name="address1" optional="YES" attributeType="String"/>
+        <attribute name="address2" optional="YES" attributeType="String"/>
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="chkRedemption" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="contactNo" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="creditLimit" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="custId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="customerLoyaltyNo" optional="YES" attributeType="String"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="String"/>
+        <attribute name="drivingLienceNo" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="priceLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="qRCode" optional="YES" attributeType="String"/>
+        <attribute name="registrationDate" optional="YES" attributeType="String"/>
+        <attribute name="shipAddress1" optional="YES" attributeType="String"/>
+        <attribute name="shipAddress2" optional="YES" attributeType="String"/>
+        <attribute name="shipCity" optional="YES" attributeType="String"/>
+        <attribute name="shipCountry" optional="YES" attributeType="String"/>
+        <attribute name="shipZipCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="zipCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Department" representedClassName="Department" syncable="YES" codeGenerationType="class">
+        <attribute name="applyAgeDesc" optional="YES" attributeType="String"/>
+        <attribute name="chargeAmt" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="chargeTyp" optional="YES" attributeType="String"/>
+        <attribute name="checkCashAmt" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="checkCashType" optional="YES" attributeType="String"/>
+        <attribute name="chkCheckCash" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="chkExtra" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="deductChk" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="deptCode" optional="YES" attributeType="String"/>
+        <attribute name="deptId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="deptName" optional="YES" attributeType="String"/>
+        <attribute name="deptTypeId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="imagePath" optional="YES" attributeType="String"/>
+        <attribute name="is_asItem" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isAgeApply" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isEnabled" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="isMoneyOrder" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isNotApplyInItem" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isNotDisplay" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isNotDisplayInventory" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isPOS" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isService" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="itemcode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="profitMargin" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="salesPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="taxApplyIn" optional="YES" attributeType="String"/>
+        <attribute name="taxFlg" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentCategory" inverseName="departments" inverseEntity="DepartmentCategory"/>
+        <relationship name="departmentItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemDepartment" inverseEntity="Item"/>
+        <relationship name="departmentPrinter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KitchenPrinter" inverseName="printerDepartments" inverseEntity="KitchenPrinter"/>
+        <relationship name="departmentSubDepartments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubDepartment" inverseName="subDepartmentDepartments" inverseEntity="SubDepartment"/>
+        <relationship name="service" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentService" inverseName="department" inverseEntity="DepartmentService"/>
+    </entity>
+    <entity name="DepartmentCategory" representedClassName="DepartmentCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="departments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Department" inverseName="category" inverseEntity="Department"/>
+    </entity>
+    <entity name="DepartmentService" representedClassName="DepartmentService" syncable="YES" codeGenerationType="class">
+        <attribute name="deptId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="deptType" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="orderNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="service" inverseEntity="Department"/>
+    </entity>
+    <entity name="DepartmentTax" representedClassName="DepartmentTax" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="deptId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="taxId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Discount_M" representedClassName="Discount_M" syncable="YES" codeGenerationType="class">
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String"/>
+        <attribute name="discountId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="discountType" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="free" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="freeType" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="fuelValueForPI" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="fuelValueForSI" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="isApplyManually" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isCase" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isCustomerSelectionRequired" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isOnLowestPrice" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="isPack" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isStatus" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isUnit" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="primaryItemQty" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="qtyLimit" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="qualificationCriteriaForPI" optional="YES" attributeType="Integer 64" defaultValueString="2" usesScalarValueType="NO"/>
+        <attribute name="qualificationCriteriaForSI" optional="YES" attributeType="Integer 64" defaultValueString="2" usesScalarValueType="NO"/>
+        <attribute name="quantityType" optional="YES" attributeType="Integer 64" defaultValueString="1" usesScalarValueType="NO"/>
+        <attribute name="secondaryItemQty" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="taxType" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="validDays" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <relationship name="primaryItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Discount_Primary_MD" inverseName="primaryItem" inverseEntity="Discount_Primary_MD"/>
+        <relationship name="promotions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Promotion_M" inverseName="discounts" inverseEntity="Promotion_M"/>
+        <relationship name="secondaryItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Discount_Secondary_MD" inverseName="secondaryItem" inverseEntity="Discount_Secondary_MD"/>
+    </entity>
+    <entity name="Discount_Primary_MD" representedClassName="Discount_Primary_MD" syncable="YES" codeGenerationType="class">
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="discountId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itemType" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="primaryId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="itemDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="primaryItemDetail" inverseEntity="Item"/>
+        <relationship name="primaryItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Discount_M" inverseName="primaryItems" inverseEntity="Discount_M"/>
+    </entity>
+    <entity name="Discount_Secondary_MD" representedClassName="Discount_Secondary_MD" syncable="YES" codeGenerationType="class">
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="discountId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itemType" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="secondaryId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="itemDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="secondaryItemDetail" inverseEntity="Item"/>
+        <relationship name="secondaryItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Discount_M" inverseName="secondaryItems" inverseEntity="Discount_M"/>
+    </entity>
+    <entity name="DiscountMaster" representedClassName="DiscountMaster" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="discountId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="salesDiscount" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="FavouriteItem" representedClassName="FavouriteItem" syncable="YES" codeGenerationType="class">
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itemPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="packageType" optional="YES" attributeType="String"/>
+        <attribute name="rowPosition" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="favouriteItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemFavoutite" inverseEntity="Item"/>
+    </entity>
+    <entity name="FeeOrDeposit" representedClassName="FeeOrDeposit" syncable="YES" codeGenerationType="class">
+        <attribute name="chargeStructure" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="chargeType" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="feeOrDepositId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isTaxApply" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="chargedTaxes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TaxMaster" inverseName="taxCharges" inverseEntity="TaxMaster"/>
+        <relationship name="chargePackageTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ChargePackageType" inverseName="feeOrDeposit" inverseEntity="ChargePackageType"/>
+        <relationship name="charges" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FeeOrDepositCharge" inverseName="chargeFees" inverseEntity="FeeOrDepositCharge"/>
+    </entity>
+    <entity name="FeeOrDepositCharge" representedClassName="FeeOrDepositCharge" syncable="YES" codeGenerationType="class">
+        <attribute name="chargeId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="chargeType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="chargeValue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="endRange" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="startRange" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <relationship name="chargeFees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FeeOrDeposit" inverseName="charges" inverseEntity="FeeOrDeposit"/>
+    </entity>
+    <entity name="FuelPump" representedClassName="FuelPump" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="amountLimit" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="cart" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="volume" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="volumeLimit" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="GroupMaster" representedClassName="GroupMaster" syncable="YES" codeGenerationType="class">
+        <attribute name="costPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="disc_Id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="groupName" optional="YES" attributeType="String"/>
+        <attribute name="sellingPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <relationship name="groupMasterItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemGroupMaster" inverseEntity="Item"/>
+    </entity>
+    <entity name="HoldInvoice" representedClassName="HoldInvoice" syncable="YES" codeGenerationType="class">
+        <attribute name="billAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="holdData" optional="YES" attributeType="Binary"/>
+        <attribute name="holdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="holdRemark" optional="YES" attributeType="String"/>
+        <attribute name="holdUserName" optional="YES" attributeType="String"/>
+        <attribute name="transActionNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="InvoiceData_T" representedClassName="InvoiceData_T" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="invoiceDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="invoiceItemData" optional="YES" attributeType="Binary"/>
+        <attribute name="invoiceMstData" optional="YES" attributeType="Binary"/>
+        <attribute name="invoiceNo" optional="YES" attributeType="Integer 64" usesScalarValueType="NO"/>
+        <attribute name="invoicePaymentData" optional="YES" attributeType="Binary"/>
+        <attribute name="isUpload" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemInvoiceLog" optional="YES" attributeType="Binary"/>
+        <attribute name="localShiftId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="msgCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="regInvoiceNo" optional="YES" attributeType="String"/>
+        <attribute name="regiterid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="serverShiftId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="zId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="averageCost" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="barcode" optional="YES" attributeType="String"/>
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="cashierNote" optional="YES" attributeType="String"/>
+        <attribute name="cate_MixMatchFlg" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="cate_MixMatchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="catId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="child_Qty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="citm_Code" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="costPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="departmentName" optional="YES" attributeType="String"/>
+        <attribute name="deptId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String"/>
+        <attribute name="dis_CalcItm" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="eBT" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="is_Selected" optional="YES" transient="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isDisplayInPos" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isDisplayInSubDept" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isDuplicateBarcodeAllowed" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isFeeOrDeposit" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isItemPayout" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isNotDisplayInventory" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isPriceAtPOS" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isShortcutInPos" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isTicket" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="item_Desc" optional="YES" attributeType="String"/>
+        <attribute name="item_Discount" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="item_ImagePath" optional="YES" attributeType="String"/>
+        <attribute name="item_InStock" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="item_MaxStockLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="item_MinStockLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="item_No" optional="YES" attributeType="String"/>
+        <attribute name="item_Remarks" optional="YES" attributeType="String"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itm_Type" optional="YES" attributeType="String"/>
+        <attribute name="lastInvoice" optional="YES" attributeType="String"/>
+        <attribute name="lastReceivedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastSoldDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="memo" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="mixMatchFlg" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="mixMatchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="noDiscountFlg" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="orderStatus" optional="YES" attributeType="String"/>
+        <attribute name="perbox_Qty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="pos_DISCOUNT" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="pricescale" optional="YES" attributeType="String"/>
+        <attribute name="profit_Amt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="profit_Type" optional="YES" attributeType="String"/>
+        <attribute name="qty_Discount" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="quantityManagementEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="salesPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="salesVelocity" optional="YES" attributeType="String"/>
+        <attribute name="sectionLabel" optional="YES" attributeType="String"/>
+        <attribute name="subDeptId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="supplierdata" optional="YES" attributeType="Transformable"/>
+        <attribute name="taxApply" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="taxType" optional="YES" attributeType="String"/>
+        <attribute name="weightqty" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="weightype" optional="YES" attributeType="String"/>
+        <relationship name="chargePackageTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ChargePackageType" inverseName="item" inverseEntity="ChargePackageType"/>
+        <relationship name="itemBarcodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ItemBarCode_Md" inverseName="barcodeItem" inverseEntity="ItemBarCode_Md"/>
+        <relationship name="itemDepartment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="departmentItems" inverseEntity="Department"/>
+        <relationship name="itemFavoutite" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FavouriteItem" inverseName="favouriteItem" inverseEntity="FavouriteItem"/>
+        <relationship name="itemGroupMaster" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupMaster" inverseName="groupMasterItems" inverseEntity="GroupMaster"/>
+        <relationship name="itemItemCount" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ItemInventoryCount" inverseName="itemCountItem" inverseEntity="ItemInventoryCount"/>
+        <relationship name="itemMixMatchDisc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mix_MatchDetail" inverseName="mixMatchDiscount" inverseEntity="Mix_MatchDetail"/>
+        <relationship name="itemModifierPrices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ModifierPrice" inverseName="modifierPriceItem" inverseEntity="ModifierPrice"/>
+        <relationship name="itemSubDepartment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubDepartment" inverseName="subDepartmentItems" inverseEntity="SubDepartment"/>
+        <relationship name="itemTags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemTag" inverseName="tagToItem" inverseEntity="ItemTag"/>
+        <relationship name="itemTicket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemTicket_MD" inverseName="ticketToItem" inverseEntity="ItemTicket_MD"/>
+        <relationship name="itemToDisMd" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item_Discount_MD" inverseName="mdToItem" inverseEntity="Item_Discount_MD"/>
+        <relationship name="itemToItemList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemList" inverseName="itemListToitems" inverseEntity="ItemList"/>
+        <relationship name="itemToPriceMd" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item_Price_MD" inverseName="priceToItem" inverseEntity="Item_Price_MD"/>
+        <relationship name="itemToRestaurantItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RestaurantItem" inverseName="restaurantItemToItem" inverseEntity="RestaurantItem"/>
+        <relationship name="itemtoRestoking" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RestockReport" inverseName="restokingtoItem" inverseEntity="RestockReport"/>
+        <relationship name="itemVariations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemVariation_M" inverseName="variationItem" inverseEntity="ItemVariation_M"/>
+        <relationship name="manualEntries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ManualReceivedItem" inverseName="item" inverseEntity="ManualReceivedItem"/>
+        <relationship name="primaryItemDetail" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Discount_Primary_MD" inverseName="itemDetail" inverseEntity="Discount_Primary_MD"/>
+        <relationship name="secondaryItemDetail" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Discount_Secondary_MD" inverseName="itemDetail" inverseEntity="Discount_Secondary_MD"/>
+        <relationship name="suppliers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SupplierCompany" inverseName="items" inverseEntity="SupplierCompany"/>
+    </entity>
+    <entity name="Item_Discount_MD" representedClassName="Item_Discount_MD" syncable="YES" codeGenerationType="class">
+        <attribute name="dis_Qty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="dis_UnitPrice" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="iDisNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isDiscounted" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="mdToItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemToDisMd" inverseEntity="Item"/>
+        <relationship name="mdTomd2" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item_Discount_MD2" inverseName="md2Tomd" inverseEntity="Item_Discount_MD2"/>
+    </entity>
+    <entity name="Item_Discount_MD2" representedClassName="Item_Discount_MD2" syncable="YES" codeGenerationType="class">
+        <attribute name="dayId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="discountId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="endDate" optional="YES" attributeType="String"/>
+        <attribute name="rowId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="startDate" optional="YES" attributeType="String"/>
+        <relationship name="md2Tomd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item_Discount_MD" inverseName="mdTomd2" inverseEntity="Item_Discount_MD"/>
+    </entity>
+    <entity name="Item_Price_MD" representedClassName="Item_Price_MD" syncable="YES" codeGenerationType="class">
+        <attribute name="applyPrice" optional="YES" attributeType="String"/>
+        <attribute name="cost" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="createddate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isPackCaseAllow" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemcode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="priceA" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="priceB" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="priceC" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="priceqtytype" optional="YES" attributeType="String"/>
+        <attribute name="profit" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="qty" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="quantityLimitA" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="quantityLimitB" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="quantityLimitC" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="unitPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="unitQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="unitType" optional="YES" attributeType="String"/>
+        <relationship name="priceBarcodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemBarCode_Md" inverseName="barcodePrice_MD" inverseEntity="ItemBarCode_Md"/>
+        <relationship name="priceToItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemToPriceMd" inverseEntity="Item"/>
+    </entity>
+    <entity name="ItemBarCode_Md" representedClassName="ItemBarCode_Md" syncable="YES" codeGenerationType="class">
+        <attribute name="barCode" optional="YES" attributeType="String"/>
+        <attribute name="isAutoGenerated" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isBarcodeDeleted" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isDefault" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="packageType" optional="YES" attributeType="String"/>
+        <attribute name="srNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="barcodeItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemBarcodes" inverseEntity="Item"/>
+        <relationship name="barcodePrice_MD" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item_Price_MD" inverseName="priceBarcodes" inverseEntity="Item_Price_MD"/>
+    </entity>
+    <entity name="ItemInventoryCount" representedClassName="ItemInventoryCount" syncable="YES" codeGenerationType="class">
+        <attribute name="caseCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isUploadedToServer" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itemCountId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="packCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="registerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="sessionId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="singleCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userSessionId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="itemCountItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemItemCount" inverseEntity="Item"/>
+        <relationship name="itemInventoryCountSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemInventoryCountSession" inverseName="sessionItemCount" inverseEntity="ItemInventoryCountSession"/>
+        <relationship name="itemInventoryReconcileCount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemInventoryReconcileCount" inverseName="itemInventoryCounts" inverseEntity="ItemInventoryReconcileCount"/>
+    </entity>
+    <entity name="ItemInventoryCountSession" representedClassName="ItemInventoryCountSession" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="remarks" optional="YES" attributeType="String"/>
+        <attribute name="sessionId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="sessionItemCount" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ItemInventoryCount" inverseName="itemInventoryCountSession" inverseEntity="ItemInventoryCount"/>
+        <relationship name="sessionReconcileCounts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ItemInventoryReconcileCount" inverseName="itemInventoryReconcileSession" inverseEntity="ItemInventoryReconcileCount"/>
+    </entity>
+    <entity name="ItemInventoryReconcileCount" representedClassName="ItemInventoryReconcileCount" syncable="YES" codeGenerationType="class">
+        <attribute name="caseCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="caseQuantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="expectedQuantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isCounted" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="isMatching" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="packCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="packQuantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="registerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="sessionId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="singleCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="singleQuantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="itemInventoryCounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemInventoryCount" inverseName="itemInventoryReconcileCount" inverseEntity="ItemInventoryCount"/>
+        <relationship name="itemInventoryReconcileSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemInventoryCountSession" inverseName="sessionReconcileCounts" inverseEntity="ItemInventoryCountSession"/>
+    </entity>
+    <entity name="ItemList" representedClassName="ItemList" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isLabelPrintItem" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isOpen" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemName" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="itemListToitems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemToItemList" inverseEntity="Item"/>
+    </entity>
+    <entity name="ItemSupplier" representedClassName="ItemSupplier" syncable="YES" codeGenerationType="class">
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="supId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="vendorId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="ItemTag" representedClassName="ItemTag" syncable="YES" codeGenerationType="class">
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="sizeId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="tagToItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemTags" inverseEntity="Item"/>
+        <relationship name="tagToSizeMaster" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SizeMaster" inverseName="sizeMasterToTags" inverseEntity="SizeMaster"/>
+    </entity>
+    <entity name="ItemTax" representedClassName="ItemTax" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Integer 64" usesScalarValueType="NO"/>
+        <attribute name="itemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="taxId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="ItemTicket_MD" representedClassName="ItemTicket_MD" syncable="YES" codeGenerationType="class">
+        <attribute name="createddate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="expirationDays" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="friday" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isExpiration" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isTicket" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="monday" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="noOfdays" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="noOfPerson" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="saturday" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="selectedOption" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="sunday" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="thursday" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="ticketId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="tuesday" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="wednesday" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <relationship name="ticketToItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemTicket" inverseEntity="Item"/>
+    </entity>
+    <entity name="ItemVariation_M" representedClassName="ItemVariation_M" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="colPosNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="varianceId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="variationMasterId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="variationName" optional="YES" attributeType="String"/>
+        <relationship name="variationItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemVariations" inverseEntity="Item"/>
+        <relationship name="variationMMaster" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Variation_Master" inverseName="masterVariationMs" inverseEntity="Variation_Master"/>
+        <relationship name="variationMVariationMds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemVariation_Md" inverseName="variationMdVariationM" inverseEntity="ItemVariation_Md"/>
+    </entity>
+    <entity name="ItemVariation_Md" representedClassName="ItemVariation_Md" syncable="YES" codeGenerationType="class">
+        <attribute name="applyPrice" optional="YES" attributeType="String"/>
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="cost" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="measurementQuantity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="measurementUnit" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="priceA" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="priceB" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="priceC" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="profit" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="rowPosNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="unitPrice" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="varianceId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="variationMdVariationM" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemVariation_M" inverseName="variationMVariationMds" inverseEntity="ItemVariation_M"/>
+    </entity>
+    <entity name="KitchenPrinter" representedClassName="KitchenPrinter" syncable="YES" codeGenerationType="class">
+        <attribute name="printer_ip" optional="YES" attributeType="String"/>
+        <attribute name="printer_Name" optional="YES" attributeType="String"/>
+        <relationship name="printerDepartments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Department" inverseName="departmentPrinter" inverseEntity="Department"/>
+    </entity>
+    <entity name="LastInvoiceData" representedClassName="LastInvoiceData" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="changeDue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="collectAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="invoiceData" optional="YES" attributeType="Binary"/>
+        <attribute name="invoiceDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="paymentType" optional="YES" attributeType="String"/>
+        <attribute name="regInvoiceNo" optional="YES" attributeType="String"/>
+        <attribute name="regiterid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="tenderAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="zId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="ManualPOSession" representedClassName="ManualPOSession" syncable="YES" codeGenerationType="class">
+        <attribute name="invoiceNumber" optional="YES" attributeType="String"/>
+        <attribute name="manualPoId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="poRemark" optional="YES" attributeType="String"/>
+        <attribute name="receivedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="supplierId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="supplierIDsession" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ManualReceivedItem" inverseName="supplierIDitems" inverseEntity="ManualReceivedItem"/>
+    </entity>
+    <entity name="ManualReceivedItem" representedClassName="ManualReceivedItem" syncable="YES" codeGenerationType="class">
+        <attribute name="caseCost" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="caseMarkup" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="casePrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="caseQuantityReceived" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="caseReceivedFreeGoodQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="cashQtyonHand" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="freeGoodCaseCost" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="freeGoodCost" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="freeGoodPackCost" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isReturn" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="packCost" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="packMarkup" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="packPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="packQtyonHand" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="packQuantityReceived" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="packReceivedFreeGoodQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="receivedItemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="singleReceivedFreeGoodQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="unitCost" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="unitMarkup" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="unitPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="unitQtyonHand" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="unitQuantityReceived" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="manualEntries" inverseEntity="Item"/>
+        <relationship name="supplierIDitems" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManualPOSession" inverseName="supplierIDsession" inverseEntity="ManualPOSession"/>
+    </entity>
+    <entity name="Mix_MatchDetail" representedClassName="Mix_MatchDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="code" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="discCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="discountType" optional="YES" attributeType="String"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="item_Description" optional="YES" attributeType="String"/>
+        <attribute name="itemType" optional="YES" attributeType="String"/>
+        <attribute name="mix_Match_Amt" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="mix_Match_Qty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="mixMatchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="quantityX" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="quantityY" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="mixMatchDiscount" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemMixMatchDisc" inverseEntity="Item"/>
+    </entity>
+    <entity name="ModifierPrice" representedClassName="ModifierPrice" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="brnModifierItemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="calcInPOS" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="modifierId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="modifierListId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="modifierPriceId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="modifireItem" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <relationship name="modifierPriceGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Modifire_M" inverseName="modifier_MModifierPrices" inverseEntity="Modifire_M"/>
+        <relationship name="modifierPriceItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemModifierPrices" inverseEntity="Item"/>
+        <relationship name="modifierPriceList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModifireList_M" inverseName="modifierItem_MModifierPrices" inverseEntity="ModifireList_M"/>
+    </entity>
+    <entity name="Modifire_M" representedClassName="Modifire_M" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="brnModifierId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="modifireName" optional="YES" attributeType="String"/>
+        <relationship name="modifier_MModifierPrices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ModifierPrice" inverseName="modifierPriceGroup" inverseEntity="ModifierPrice"/>
+    </entity>
+    <entity name="ModifireList_M" representedClassName="ModifireList_M" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="brnModifierItemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="calcInPOS" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="modifierId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="modifireItem" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <relationship name="modifierItem_MModifierPrices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ModifierPrice" inverseName="modifierPriceList" inverseEntity="ModifierPrice"/>
+    </entity>
+    <entity name="ModuleInfo" representedClassName="ModuleInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="companyId" optional="YES" attributeType="String"/>
+        <attribute name="dBName" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isCustomerDisplay" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isRCRGAS" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isRelease" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="macAdd" optional="YES" attributeType="String"/>
+        <attribute name="moduleAccessId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="moduleCode" optional="YES" attributeType="String"/>
+        <attribute name="moduleId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="moduleType" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="registerName" optional="YES" attributeType="String"/>
+        <attribute name="registerNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="tokenId" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NonCashAdjustment" representedClassName="NonCashAdjustment" syncable="YES" codeGenerationType="class">
+        <attribute name="chargeStructure" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="chargeType" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="isManualRefund" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isRefund" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isTaxApply" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isVoid" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="nonCashID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="chargedTaxes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TaxMaster" inverseName="taxNcaCharges" inverseEntity="TaxMaster"/>
+        <relationship name="charges" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonCashAdjustmentCharge" inverseName="nonCashCharge" inverseEntity="NonCashAdjustmentCharge"/>
+        <relationship name="tenderPays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TenderPay" inverseName="nonCashAdjustment" inverseEntity="TenderPay"/>
+    </entity>
+    <entity name="NonCashAdjustmentCharge" representedClassName="NonCashAdjustmentCharge" syncable="YES" codeGenerationType="class">
+        <attribute name="chargeId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="chargeType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="chargeValue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="endRange" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="startRange" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <relationship name="nonCashCharge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonCashAdjustment" inverseName="charges" inverseEntity="NonCashAdjustment"/>
+    </entity>
+    <entity name="NoSale" representedClassName="NoSale" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="String"/>
+        <attribute name="datetime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="noSaleID" optional="YES" attributeType="String"/>
+        <attribute name="noSaleType" optional="YES" attributeType="String"/>
+        <attribute name="registerId" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="String"/>
+        <attribute name="zId" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Printers" representedClassName="Printers" syncable="YES" codeGenerationType="class">
+        <attribute name="isOnline" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isSelected" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="macAddress" optional="YES" attributeType="String"/>
+        <attribute name="modelName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="portName" optional="YES" attributeType="String"/>
+        <attribute name="registerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Promotion_M" representedClassName="Promotion_M" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="categoryID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="promotionID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="qty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="discounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Discount_M" inverseName="promotions" inverseEntity="Discount_M"/>
+    </entity>
+    <entity name="RapidLogManager" representedClassName="RapidLogManager" syncable="YES" codeGenerationType="class">
+        <attribute name="error" optional="YES" attributeType="String"/>
+        <attribute name="errorCode" optional="YES" attributeType="String"/>
+        <attribute name="logMessage" optional="YES" attributeType="String"/>
+        <attribute name="macAddress" optional="YES" attributeType="String"/>
+        <attribute name="serviceName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RegionalSettings" representedClassName="RegionalSettings" syncable="YES" codeGenerationType="class">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="currencyCode" optional="YES" attributeType="String"/>
+        <attribute name="currencySymbol" optional="YES" attributeType="String"/>
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="shortForm_UnitOfVolume" optional="YES" attributeType="String"/>
+        <attribute name="srNo" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="symbol_UnitOfVolume" optional="YES" attributeType="String"/>
+        <attribute name="timeZone" optional="YES" attributeType="String"/>
+        <attribute name="unitOfVolume" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RegisterInfo" representedClassName="RegisterInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="String"/>
+        <attribute name="dBName" optional="YES" attributeType="String"/>
+        <attribute name="invPrefix" optional="YES" attributeType="String"/>
+        <attribute name="registerId" optional="YES" attributeType="String"/>
+        <attribute name="registerInvNo" optional="YES" attributeType="String"/>
+        <attribute name="registerName" optional="YES" attributeType="String"/>
+        <attribute name="tokenId" optional="YES" attributeType="String"/>
+        <attribute name="zId" optional="YES" attributeType="String"/>
+        <attribute name="zRequired" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="RestaurantItem" representedClassName="RestaurantItem" syncable="YES" codeGenerationType="class">
+        <attribute name="guestId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isCanceled" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isDineIn" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isNoPrint" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isPrinted" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemDetail" optional="YES" attributeType="Binary"/>
+        <attribute name="itemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itemIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itemName" optional="YES" attributeType="String"/>
+        <attribute name="noteToChef" optional="YES" attributeType="String"/>
+        <attribute name="orderId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="orderItemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="previousQuantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="itemToOrderRestaurant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RestaurantOrder" inverseName="restaurantOrderItem" inverseEntity="RestaurantOrder"/>
+        <relationship name="restaurantItemToItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemToRestaurantItem" inverseEntity="Item"/>
+    </entity>
+    <entity name="RestaurantOrder" representedClassName="RestaurantOrder" syncable="YES" codeGenerationType="class">
+        <attribute name="branch_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="customerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="invoiceNo" optional="YES" attributeType="String"/>
+        <attribute name="isDineIn" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isPaid" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="noOfGuest" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="order_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="orderStatus" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="paymentData" optional="YES" attributeType="Binary"/>
+        <attribute name="register_Id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="state" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="tabelName" optional="YES" attributeType="String"/>
+        <attribute name="table_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="totalAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="totalDiscount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="totalTax" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="waiter_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="waiterName" optional="YES" attributeType="String"/>
+        <relationship name="restaurantOrderItem" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RestaurantItem" inverseName="itemToOrderRestaurant" inverseEntity="RestaurantItem"/>
+    </entity>
+    <entity name="RestockReport" representedClassName="RestockReport" syncable="YES" codeGenerationType="class">
+        <attribute name="aQTYCase" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="aQTYPack" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="aQTYSingle" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="filterDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="itemBarcode" optional="YES" attributeType="String"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="itemImageURL" optional="YES" attributeType="String"/>
+        <attribute name="itemName" optional="YES" attributeType="String"/>
+        <attribute name="restockStatus" optional="YES" attributeType="Integer 64" defaultValueString="1" usesScalarValueType="NO"/>
+        <attribute name="sQTYCase" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="sQTYPack" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="sQTYSingle" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="totalonHand" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="totalSoldQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="restokingtoItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemtoRestoking" inverseEntity="Item"/>
+    </entity>
+    <entity name="RightInfo" representedClassName="RightInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="flgRight" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="pOSRight" optional="YES" attributeType="String"/>
+        <attribute name="rightId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="userInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="userRight" inverseEntity="UserInfo"/>
+    </entity>
+    <entity name="RoleInfo" representedClassName="RoleInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="canEdit" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isView" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="menuName" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userRoleId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="roleToUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="userRole" inverseEntity="UserInfo"/>
+    </entity>
+    <entity name="ShiftDetail" representedClassName="ShiftDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="branchID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="cashType" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isOffline" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isShiftOpen" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="localShiftId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="registerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="serverShiftId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="shiftCloseAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="shiftOpenAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="zId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="SizeMaster" representedClassName="SizeMaster" syncable="YES" codeGenerationType="class">
+        <attribute name="sizeId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="sizeName" optional="YES" attributeType="String"/>
+        <relationship name="sizeMasterToTags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemTag" inverseName="tagToSizeMaster" inverseEntity="ItemTag"/>
+    </entity>
+    <entity name="StoreInfo" representedClassName="StoreInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="keyName" optional="YES" attributeType="String"/>
+        <attribute name="keyValue" optional="YES" attributeType="String"/>
+        <attribute name="rowType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="SubDepartment" representedClassName="SubDepartment" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="brnSubDeptID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="deptId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isNotDisplayInventory" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="remarks" optional="YES" attributeType="String"/>
+        <attribute name="subDepCode" optional="YES" attributeType="String"/>
+        <attribute name="subDeptImagePath" optional="YES" attributeType="String"/>
+        <attribute name="subDeptName" optional="YES" attributeType="String"/>
+        <relationship name="subDepartmentDepartments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Department" inverseName="departmentSubDepartments" inverseEntity="Department"/>
+        <relationship name="subDepartmentItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemSubDepartment" inverseEntity="Item"/>
+    </entity>
+    <entity name="SupplierCompany" representedClassName="SupplierCompany" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="companyId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="companyZone" optional="YES" attributeType="String"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="phoneNo" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="supplierDatabase" optional="YES" attributeType="String"/>
+        <attribute name="supplierZone" optional="YES" attributeType="String"/>
+        <attribute name="venderId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="zipCode" optional="YES" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="suppliers" inverseEntity="Item"/>
+        <relationship name="representatives" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SupplierRepresentative" inverseName="company" inverseEntity="SupplierRepresentative"/>
+    </entity>
+    <entity name="SupplierMaster" representedClassName="SupplierMaster" syncable="YES" codeGenerationType="class">
+        <attribute name="brnSupplierId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="contactNo" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="selectedPhoneNo" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SupplierRepresentative" representedClassName="SupplierRepresentative" syncable="YES" codeGenerationType="class">
+        <attribute name="address1" optional="YES" attributeType="String"/>
+        <attribute name="address2" optional="YES" attributeType="String"/>
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="brnSupplierId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="companyId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="contactNo" optional="YES" attributeType="String"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="isDelete" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="String"/>
+        <attribute name="selectedPhoneNo" optional="YES" attributeType="String"/>
+        <attribute name="srno" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="zipCode" optional="YES" attributeType="String"/>
+        <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SupplierCompany" inverseName="representatives" inverseEntity="SupplierCompany"/>
+    </entity>
+    <entity name="TaxMaster" representedClassName="TaxMaster" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="isIncludedInPrice" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
+        <attribute name="percentage" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="taxId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="taxNAME" optional="YES" attributeType="String"/>
+        <attribute name="taxType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="taxCharges" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FeeOrDeposit" inverseName="chargedTaxes" inverseEntity="FeeOrDeposit"/>
+        <relationship name="taxNcaCharges" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonCashAdjustment" inverseName="chargedTaxes" inverseEntity="NonCashAdjustment"/>
+    </entity>
+    <entity name="TenderPay" representedClassName="TenderPay" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="cardIntType" optional="YES" attributeType="String"/>
+        <attribute name="chkDropAmt" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="flgSurcharge" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="gasAmountLimit" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isMemo" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="payCode" optional="YES" attributeType="String"/>
+        <attribute name="payId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="payImage" optional="YES" attributeType="String"/>
+        <attribute name="paymentName" optional="YES" attributeType="String"/>
+        <attribute name="shortcutKeys" optional="YES" attributeType="String"/>
+        <attribute name="surchargeFixAmt" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="surchargeType" optional="YES" attributeType="String"/>
+        <relationship name="nonCashAdjustment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonCashAdjustment" inverseName="tenderPays" inverseEntity="NonCashAdjustment"/>
+    </entity>
+    <entity name="TipPercentageMaster" representedClassName="TipPercentageMaster" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="brnTipPercentageId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdBy" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="tipPercentage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="UnitConversion" representedClassName="UnitConversion" syncable="YES" codeGenerationType="class">
+        <attribute name="factor" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="fromUnitType" optional="YES" attributeType="String"/>
+        <attribute name="toUnitType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="cashInOutFlg" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="cashInRequire" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="clockInOutFlg" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="clockInRequire" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="formEnumData" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isBranchAdmin" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isChangePwdOnLogin" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="isFirstTimeLogin" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="lastAccessDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="messageId" optional="YES" attributeType="String"/>
+        <attribute name="messageName" optional="YES" attributeType="String"/>
+        <attribute name="roleId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="userName" optional="YES" attributeType="String"/>
+        <relationship name="clockInOutRecords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClockInOutRecords" inverseName="user" inverseEntity="ClockInOutRecords"/>
+        <relationship name="userCredential" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CredentialInfo" inverseName="credentialToUser" inverseEntity="CredentialInfo"/>
+        <relationship name="userRight" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RightInfo" inverseName="userInfo" inverseEntity="RightInfo"/>
+        <relationship name="userRole" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RoleInfo" inverseName="roleToUser" inverseEntity="RoleInfo"/>
+    </entity>
+    <entity name="Variation_Master" representedClassName="Variation_Master" syncable="YES" codeGenerationType="class">
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="vid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="masterVariationMs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemVariation_M" inverseName="variationMMaster" inverseEntity="ItemVariation_M"/>
+    </entity>
+    <entity name="Vendor_Item" representedClassName="Vendor_Item" syncable="YES" codeGenerationType="class">
+        <attribute name="cartonUpc" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="categoryDesc" optional="YES" attributeType="String"/>
+        <attribute name="categoryDescription" optional="YES" attributeType="String"/>
+        <attribute name="effectiveDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="globalSub" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="invoiceCategory" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="isNew" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCategory" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="itemDescription" optional="YES" attributeType="String"/>
+        <attribute name="itemPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="lineFor" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="linePerPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="packUpc" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="size" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="srpFactor" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="unitCost" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="unitRetail" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="vendor_Id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="vendor_Item_Id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="vin" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="zoneId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="vpoitems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="VPurchaseOrderItem" inverseName="vitems" inverseEntity="VPurchaseOrderItem"/>
+    </entity>
+    <entity name="VPurchaseOrder" representedClassName="VPurchaseOrder" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="department" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="keyowrd" optional="YES" attributeType="String"/>
+        <attribute name="orderName" optional="YES" attributeType="String"/>
+        <attribute name="orderNo" optional="YES" attributeType="String"/>
+        <attribute name="poId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="registerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="poIdItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="VPurchaseOrderItem" inverseName="vpoId" inverseEntity="VPurchaseOrderItem"/>
+    </entity>
+    <entity name="VPurchaseOrderItem" representedClassName="VPurchaseOrderItem" syncable="YES" codeGenerationType="class">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="casePOQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="caseReceivedQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isReturn" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="oldQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="packPOQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="packReceivedQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="poId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="poItemId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="remarks" optional="YES" attributeType="String"/>
+        <attribute name="singlePOQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="singleReceivedQty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="vitems" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vendor_Item" inverseName="vpoitems" inverseEntity="Vendor_Item"/>
+        <relationship name="vpoId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VPurchaseOrder" inverseName="poIdItem" inverseEntity="VPurchaseOrder"/>
+    </entity>
+    <entity name="WeightScaleUnit" representedClassName="WeightScaleUnit" syncable="YES" codeGenerationType="class">
+        <attribute name="unitScale" optional="YES" attributeType="String"/>
+        <attribute name="unitType" optional="YES" attributeType="String"/>
+        <attribute name="weightScaleType" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="AgeRestriction" positionX="513" positionY="54" width="128" height="133"/>
+        <element name="BarCodeSearch" positionX="-486" positionY="243" width="128" height="178"/>
+        <element name="BranchInfo" positionX="-695" positionY="-648" width="128" height="313"/>
+        <element name="ChargePackageType" positionX="846" positionY="1341" width="128" height="88"/>
+        <element name="ClockInOutRecords" positionX="-639" positionY="-495" width="128" height="193"/>
+        <element name="Configuration" positionX="-846" positionY="-648" width="128" height="1183"/>
+        <element name="CredentialInfo" positionX="-20" positionY="-648" width="128" height="133"/>
+        <element name="CreditcardCredetnial" positionX="-621" positionY="-49" width="128" height="238"/>
+        <element name="CurrencyShortcut" positionX="-648" positionY="-504" width="128" height="58"/>
+        <element name="Customer" positionX="-846" positionY="-48" width="128" height="433"/>
+        <element name="Department" positionX="540" positionY="657" width="128" height="523"/>
+        <element name="DepartmentCategory" positionX="-648" positionY="-504" width="128" height="103"/>
+        <element name="DepartmentService" positionX="-648" positionY="-504" width="128" height="133"/>
+        <element name="DepartmentTax" positionX="189" positionY="54" width="128" height="88"/>
+        <element name="Discount_M" positionX="25" positionY="2004" width="128" height="538"/>
+        <element name="Discount_Primary_MD" positionX="189" positionY="2031" width="128" height="163"/>
+        <element name="Discount_Secondary_MD" positionX="198" positionY="2241" width="128" height="163"/>
+        <element name="DiscountMaster" positionX="-693" positionY="929" width="128" height="178"/>
+        <element name="FavouriteItem" positionX="205" positionY="285" width="128" height="118"/>
+        <element name="FeeOrDeposit" positionX="1008" positionY="1266" width="128" height="163"/>
+        <element name="FeeOrDepositCharge" positionX="1017" positionY="1089" width="128" height="133"/>
+        <element name="FuelPump" positionX="423" positionY="-648" width="128" height="148"/>
+        <element name="GroupMaster" positionX="520" positionY="261" width="128" height="133"/>
+        <element name="HoldInvoice" positionX="828" positionY="-648" width="128" height="133"/>
+        <element name="InvoiceData_T" positionX="675" positionY="-648" width="128" height="283"/>
+        <element name="Item" positionX="358" positionY="588" width="128" height="1288"/>
+        <element name="Item_Discount_MD" positionX="-324" positionY="1614" width="128" height="148"/>
+        <element name="Item_Discount_MD2" positionX="-486" positionY="1629" width="128" height="133"/>
+        <element name="Item_Price_MD" positionX="936" positionY="1734" width="128" height="343"/>
+        <element name="ItemBarCode_Md" positionX="963" positionY="1494" width="128" height="193"/>
+        <element name="ItemInventoryCount" positionX="-11" positionY="711" width="128" height="268"/>
+        <element name="ItemInventoryCountSession" positionX="-81" positionY="486" width="128" height="163"/>
+        <element name="ItemInventoryReconcileCount" positionX="-173" positionY="695" width="128" height="283"/>
+        <element name="ItemList" positionX="351" positionY="216" width="128" height="133"/>
+        <element name="ItemSupplier" positionX="-846" positionY="927" width="128" height="88"/>
+        <element name="ItemTag" positionX="-506" positionY="1413" width="128" height="118"/>
+        <element name="ItemTax" positionX="360" positionY="54" width="128" height="88"/>
+        <element name="ItemTicket_MD" positionX="675" positionY="270" width="128" height="313"/>
+        <element name="ItemVariation_M" positionX="-558" positionY="1815" width="128" height="208"/>
+        <element name="ItemVariation_Md" positionX="-756" positionY="1923" width="128" height="298"/>
+        <element name="KitchenPrinter" positionX="711" positionY="1001" width="128" height="88"/>
+        <element name="LastInvoiceData" positionX="826" positionY="-504" width="128" height="193"/>
+        <element name="ManualPOSession" positionX="-668" positionY="2466" width="128" height="133"/>
+        <element name="ManualReceivedItem" positionX="-468" positionY="2160" width="128" height="433"/>
+        <element name="Mix_MatchDetail" positionX="61" positionY="219" width="128" height="238"/>
+        <element name="ModifierPrice" positionX="-81" positionY="1098" width="128" height="268"/>
+        <element name="Modifire_M" positionX="-227" positionY="1008" width="128" height="148"/>
+        <element name="ModifireList_M" positionX="-263" positionY="1184" width="128" height="193"/>
+        <element name="ModuleInfo" positionX="-551" positionY="-648" width="128" height="268"/>
+        <element name="NonCashAdjustment" positionX="-648" positionY="-504" width="128" height="208"/>
+        <element name="NonCashAdjustmentCharge" positionX="-639" positionY="-495" width="128" height="133"/>
+        <element name="NoSale" positionX="-623" positionY="243" width="128" height="148"/>
+        <element name="Printers" positionX="-477" positionY="-48" width="128" height="163"/>
+        <element name="Promotion_M" positionX="63" positionY="2502" width="128" height="178"/>
+        <element name="RapidLogManager" positionX="-351" positionY="243" width="128" height="118"/>
+        <element name="RegionalSettings" positionX="-648" positionY="-504" width="128" height="178"/>
+        <element name="RegisterInfo" positionX="-695" positionY="-315" width="128" height="178"/>
+        <element name="RestaurantItem" positionX="628" positionY="2160" width="128" height="283"/>
+        <element name="RestaurantOrder" positionX="799" positionY="2085" width="128" height="358"/>
+        <element name="RestockReport" positionX="-639" positionY="-495" width="128" height="298"/>
+        <element name="RightInfo" positionX="-333" positionY="-648" width="128" height="118"/>
+        <element name="RoleInfo" positionX="-342" positionY="-504" width="128" height="133"/>
+        <element name="ShiftDetail" positionX="-549" positionY="-351" width="128" height="253"/>
+        <element name="SizeMaster" positionX="-666" positionY="1442" width="128" height="88"/>
+        <element name="StoreInfo" positionX="-648" positionY="-504" width="128" height="88"/>
+        <element name="SubDepartment" positionX="567" positionY="1149" width="128" height="253"/>
+        <element name="SupplierCompany" positionX="531" positionY="2511" width="128" height="313"/>
+        <element name="SupplierMaster" positionX="-693" positionY="1125" width="128" height="148"/>
+        <element name="SupplierRepresentative" positionX="358" positionY="2490" width="128" height="343"/>
+        <element name="TaxMaster" positionX="835" positionY="1128" width="128" height="178"/>
+        <element name="TenderPay" positionX="279" positionY="-648" width="128" height="268"/>
+        <element name="TipPercentageMaster" positionX="279" positionY="-396" width="128" height="118"/>
+        <element name="UnitConversion" positionX="-839" positionY="1181" width="128" height="88"/>
+        <element name="UserInfo" positionX="-171" positionY="-648" width="128" height="358"/>
+        <element name="Variation_Master" positionX="-747" positionY="1794" width="128" height="103"/>
+        <element name="Vendor_Item" positionX="-846" positionY="405" width="128" height="388"/>
+        <element name="VPurchaseOrder" positionX="-524" positionY="540" width="128" height="268"/>
+        <element name="VPurchaseOrderItem" positionX="-684" positionY="525" width="128" height="283"/>
+        <element name="WeightScaleUnit" positionX="-846" positionY="1055" width="128" height="88"/>
+    </elements>
+</model>

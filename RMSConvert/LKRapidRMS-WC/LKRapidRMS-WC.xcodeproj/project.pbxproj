@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2E4424E230FCD11005601F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E4424D230FCD11005601F5 /* AppDelegate.swift */; };
+		B2E44250230FCD11005601F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E4424F230FCD11005601F5 /* ViewController.swift */; };
+		B2E44253230FCD11005601F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E44251230FCD11005601F5 /* Main.storyboard */; };
+		B2E44255230FCD13005601F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E44254230FCD13005601F5 /* Assets.xcassets */; };
+		B2E44258230FCD13005601F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E44256230FCD13005601F5 /* LaunchScreen.storyboard */; };
+		B2E80FBB2397823500DA26C6 /* LKRRMSNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E80FB92397823500DA26C6 /* LKRRMSNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2E80FBE2397823500DA26C6 /* LKRRMSNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E80FB72397823500DA26C6 /* LKRRMSNetwork.framework */; };
+		B2E80FBF2397823500DA26C6 /* LKRRMSNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2E80FB72397823500DA26C6 /* LKRRMSNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2E80FC62397828700DA26C6 /* LKRRMSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E80FC42397828700DA26C6 /* LKRRMSConstants.swift */; };
+		B2E80FC72397828700DA26C6 /* LKRRMSNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E80FC52397828700DA26C6 /* LKRRMSNetworkManager.swift */; };
+		B2E80FC82397846200DA26C6 /* LKRRMSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E80FC42397828700DA26C6 /* LKRRMSConstants.swift */; };
+		B2E80FC92397846200DA26C6 /* LKRRMSNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E80FC52397828700DA26C6 /* LKRRMSNetworkManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2E80FBC2397823500DA26C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2E44242230FCD11005601F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2E80FB62397823500DA26C6;
+			remoteInfo = LKRRMSNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2E80FC02397823500DA26C6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2E80FBF2397823500DA26C6 /* LKRRMSNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B2E4424A230FCD11005601F5 /* LKRapidRMS-WC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LKRapidRMS-WC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E4424D230FCD11005601F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2E4424F230FCD11005601F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2E44252230FCD11005601F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2E44254230FCD13005601F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2E44257230FCD13005601F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2E44259230FCD13005601F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2E80FB72397823500DA26C6 /* LKRRMSNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKRRMSNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E80FB92397823500DA26C6 /* LKRRMSNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LKRRMSNetwork.h; sourceTree = "<group>"; };
+		B2E80FBA2397823500DA26C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2E80FC42397828700DA26C6 /* LKRRMSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRRMSConstants.swift; sourceTree = "<group>"; };
+		B2E80FC52397828700DA26C6 /* LKRRMSNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRRMSNetworkManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2E44247230FCD11005601F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E80FBE2397823500DA26C6 /* LKRRMSNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E80FB42397823500DA26C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2E44241230FCD11005601F5 = {
+			isa = PBXGroup;
+			children = (
+				B2E4424C230FCD11005601F5 /* LKRapidRMS-WC */,
+				B2E80FB82397823500DA26C6 /* LKRRMSNetwork */,
+				B2E4424B230FCD11005601F5 /* Products */,
+				B2E44270230FE7A5005601F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B2E4424B230FCD11005601F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2E4424A230FCD11005601F5 /* LKRapidRMS-WC.app */,
+				B2E80FB72397823500DA26C6 /* LKRRMSNetwork.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2E4424C230FCD11005601F5 /* LKRapidRMS-WC */ = {
+			isa = PBXGroup;
+			children = (
+				B2E4424D230FCD11005601F5 /* AppDelegate.swift */,
+				B2E4424F230FCD11005601F5 /* ViewController.swift */,
+				B2E44251230FCD11005601F5 /* Main.storyboard */,
+				B2E44254230FCD13005601F5 /* Assets.xcassets */,
+				B2E44256230FCD13005601F5 /* LaunchScreen.storyboard */,
+				B2E44259230FCD13005601F5 /* Info.plist */,
+			);
+			path = "LKRapidRMS-WC";
+			sourceTree = "<group>";
+		};
+		B2E44270230FE7A5005601F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2E80FB82397823500DA26C6 /* LKRRMSNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				B2E80FC42397828700DA26C6 /* LKRRMSConstants.swift */,
+				B2E80FC52397828700DA26C6 /* LKRRMSNetworkManager.swift */,
+				B2E80FB92397823500DA26C6 /* LKRRMSNetwork.h */,
+				B2E80FBA2397823500DA26C6 /* Info.plist */,
+			);
+			path = LKRRMSNetwork;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B2E80FB22397823500DA26C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E80FBB2397823500DA26C6 /* LKRRMSNetwork.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B2E44249230FCD11005601F5 /* LKRapidRMS-WC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2E4425C230FCD13005601F5 /* Build configuration list for PBXNativeTarget "LKRapidRMS-WC" */;
+			buildPhases = (
+				B2E44246230FCD11005601F5 /* Sources */,
+				B2E44247230FCD11005601F5 /* Frameworks */,
+				B2E44248230FCD11005601F5 /* Resources */,
+				B2E80FC02397823500DA26C6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2E80FBD2397823500DA26C6 /* PBXTargetDependency */,
+			);
+			name = "LKRapidRMS-WC";
+			productName = "LKRapidRMS-WC";
+			productReference = B2E4424A230FCD11005601F5 /* LKRapidRMS-WC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2E80FB62397823500DA26C6 /* LKRRMSNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2E80FC32397823500DA26C6 /* Build configuration list for PBXNativeTarget "LKRRMSNetwork" */;
+			buildPhases = (
+				B2E80FB22397823500DA26C6 /* Headers */,
+				B2E80FB32397823500DA26C6 /* Sources */,
+				B2E80FB42397823500DA26C6 /* Frameworks */,
+				B2E80FB52397823500DA26C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LKRRMSNetwork;
+			productName = LKRRMSNetwork;
+			productReference = B2E80FB72397823500DA26C6 /* LKRRMSNetwork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2E44242230FCD11005601F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = Lalji;
+				TargetAttributes = {
+					B2E44249230FCD11005601F5 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					B2E80FB62397823500DA26C6 = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = B2E44245230FCD11005601F5 /* Build configuration list for PBXProject "LKRapidRMS-WC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2E44241230FCD11005601F5;
+			productRefGroup = B2E4424B230FCD11005601F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2E44249230FCD11005601F5 /* LKRapidRMS-WC */,
+				B2E80FB62397823500DA26C6 /* LKRRMSNetwork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2E44248230FCD11005601F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E44258230FCD13005601F5 /* LaunchScreen.storyboard in Resources */,
+				B2E44255230FCD13005601F5 /* Assets.xcassets in Resources */,
+				B2E44253230FCD11005601F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E80FB52397823500DA26C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2E44246230FCD11005601F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E80FC82397846200DA26C6 /* LKRRMSConstants.swift in Sources */,
+				B2E80FC92397846200DA26C6 /* LKRRMSNetworkManager.swift in Sources */,
+				B2E44250230FCD11005601F5 /* ViewController.swift in Sources */,
+				B2E4424E230FCD11005601F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2E80FB32397823500DA26C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E80FC62397828700DA26C6 /* LKRRMSConstants.swift in Sources */,
+				B2E80FC72397828700DA26C6 /* LKRRMSNetworkManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2E80FBD2397823500DA26C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2E80FB62397823500DA26C6 /* LKRRMSNetwork */;
+			targetProxy = B2E80FBC2397823500DA26C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2E44251230FCD11005601F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2E44252230FCD11005601F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2E44256230FCD13005601F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2E44257230FCD13005601F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2E4425A230FCD13005601F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = T27ESLAWLJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2E4425B230FCD13005601F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = T27ESLAWLJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2E4425D230FCD13005601F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LKRapidRMS-WC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LK.LKRapidRMS-WC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2E4425E230FCD13005601F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LKRapidRMS-WC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LK.LKRapidRMS-WC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B2E80FC12397823500DA26C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LKRRMSNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Siya.LKRRMSNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B2E80FC22397823500DA26C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LKRRMSNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Siya.LKRRMSNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2E44245230FCD11005601F5 /* Build configuration list for PBXProject "LKRapidRMS-WC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E4425A230FCD13005601F5 /* Debug */,
+				B2E4425B230FCD13005601F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2E4425C230FCD13005601F5 /* Build configuration list for PBXNativeTarget "LKRapidRMS-WC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E4425D230FCD13005601F5 /* Debug */,
+				B2E4425E230FCD13005601F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2E80FC32397823500DA26C6 /* Build configuration list for PBXNativeTarget "LKRRMSNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E80FC12397823500DA26C6 /* Debug */,
+				B2E80FC22397823500DA26C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2E44242230FCD11005601F5 /* Project object */;
+}
